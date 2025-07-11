@@ -1,6 +1,9 @@
 This project checks for broken links in HTML files using GitHub Actions and Lychee.
 
-![Link Check](https://github.com/himanshuchaudhary/my-website2/actions/workflows/link-check.yml/badge.svg)
+## Broken Link Checker Status
+
+![Check for Broken Links](https://github.com/himanshuchaudhary/my-website2/actions/workflows/link-check.yml/badge.svg)
+
 
 
 ## How it works
