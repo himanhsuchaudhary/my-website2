@@ -1,0 +1,26 @@
+name: Check for Broken Links
+
+on:
+  push:
+    branches:
+      - main  # change this if your default branch is different
+  schedule:
+    - cron: '0 5 * * *'  # runs daily at 5 AM UTC
+  workflow_dispatch:  # allows manual trigger from GitHub UI
+
+jobs:
+  broken-link-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check for broken links using lychee
+        uses: lycheeverse/lychee-action@v1.8.0
+        with:
+          args: >
+            --verbose
+            --no-progress
+            --exclude-mail
+            .
